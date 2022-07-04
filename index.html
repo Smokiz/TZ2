@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TZ</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <h1>Сделайте ставку, выбрав одну или несколько ячеек</h1>
+    <!--Таймер-->
+    <div id="myTimer">
+      <div class="timer" id="timer">10 секунд</div>
+    </div>
+    <!--Массив-->
+    <table>
+      <thead>
+        <!--Заголовки для массива-->
+        <tr class="tr">
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+      </thead>
+      <!--Вывод данныз из массива Json-->
+      <tbody class="data-output" id="data-output"></tbody>
+    </table>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--Выделяем ячейки-->
+    <script type="text/javascript">
+      $(document).on("click", "td", function () {
+        $(this).addClass("active").siblings();
+      });
+    </script>
+  </body>
+</html>
